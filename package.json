@@ -2,11 +2,11 @@
   "name": "@upcontent/vue-bootstrap-controls",
   "version": "0.0.1",
   "description": "The Custom Vue Bootstrap Controls we use at UpContent",
-  "main": "index.js",
   "scripts": {
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib",
     "lint": "vue-cli-service lint",
-    "test": "build && jest"
+    "test:unit": "vue-cli-service test:unit"
   },
   "repository": {
     "type": "git",
@@ -31,21 +31,15 @@
     "vue-color": "^2.4.6"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-alpha.8",
-    "@vue/cli-plugin-eslint": "^3.0.0-alpha.8",
-    "@vue/cli-service": "^3.0.0-alpha.8",
-    "vue-template-compiler": "^2.5.13"
-  },
-  "babel": {
-    "presets": [
-      "@vue/app"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ]
+    "@types/jest": "^23.1.4",
+    "@vue/cli-plugin-babel": "^3.0.0-rc.5",
+    "@vue/cli-plugin-typescript": "^3.0.0-rc.5",
+    "@vue/cli-plugin-unit-jest": "^3.0.0-rc.5",
+    "@vue/cli-service": "^3.0.0-rc.5",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "ts-jest": "^23.0.0",
+    "vue-template-compiler": "^2.5.16"
   },
   "postcss": {
     "plugins": {
@@ -56,5 +50,29 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
+    "testMatch": [
+      "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
+    ]
+  }
 }

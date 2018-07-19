@@ -30,7 +30,7 @@
         methods: {
             itemClicked(key) {
                 this.selectedKey = key;
-                console.log(this.selectedKey)
+                console.log(this.selectedKey);
                 this.$children.forEach(item => {
                     item.selected = item.value === key
                 });

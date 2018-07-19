@@ -16,8 +16,8 @@
                 summary.addEventListener('click', () => {
                     details.forEach(d => d.open = false);
                     // if we let default handling happen no need to set open in fact it will actually break things if we do
-                })
-            })
+                });
+            });
         },
         methods: {
             open(indexOrSelector) {

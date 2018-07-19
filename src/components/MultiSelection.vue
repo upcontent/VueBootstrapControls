@@ -1,6 +1,6 @@
 <template>
     <div v-if="selectedItems.length" class="d-flex flex-wrap mt-1">
-        <span class="label" v-for="item in selectedItems" :key="'item-'+item">{{item}} <i class="fa fa-remove" @click="removeitem(item)"></i></span>
+        <span class="label" v-for="item in selectedItems" :key="'item-'+item">{{item}} <i class="fa fa-remove" @click="removeItem(item)"></i></span>
     </div>
 </template>
 
@@ -21,7 +21,7 @@
             this.selectedItems = this.value;
         },
         methods : {
-            removeitem(item){
+            removeItem(item){
                 this.selectedItems = this.selectedItems.filter(i => i !== item);
             }
         }

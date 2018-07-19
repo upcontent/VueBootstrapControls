@@ -3,7 +3,7 @@
         <multi-select v-model="selectedItems"></multi-select>
         <select v-model="newItem" class="form-control input-sm"
                 :placeholder="placeholder"
-                @keyup.enter="additem" @change="additem" maxlength="20" >
+                @keyup.enter="additem" @change="addItem" maxlength="20" >
             <option v-for="item in items" :key="item">{{item}}</option>
         </select>
     </div>
@@ -30,12 +30,12 @@
             this.selectedItems = this.value;
         },
         methods : {
-            additem(){
+            addItem(){
                 if (this.newItem && this.selectedItems.indexOf(this.newItem)  == -1)
                     this.selectedItems.push(this.newItem);
                 this.newItem = '';
             },
-            removeitem(item){
+            removeItem(item){
                 this.selectedItems = this.selectedItems.filter(i => i !== item);
             }
         }

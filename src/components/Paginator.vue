@@ -84,16 +84,16 @@ export default {
             return items.splice(page * this.pageSize, this.pageSize);
         },
         pages(){
-            var pageArray = [...Array(this.lastPage).keys()].map(function($i){ return $i+1; });
-            var maxLength = 3
+            let pageArray = [...Array(this.lastPage).keys()].map(function($i){ return $i+1; });
+            let maxLength = 3
             if (this.small){
                 maxLength = 1
             }
 
             if (pageArray.length > maxLength){
-                var rangeToKeep = [1];
+                let rangeToKeep = [1];
 
-                var lowEnd = this.page - 2;
+                let lowEnd = this.page - 2;
 
                 if (lowEnd > 2){
                     rangeToKeep.push({ isSpacer: true });
