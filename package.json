@@ -1,0 +1,60 @@
+{
+  "name": "@upcontent/vue-bootstrap-controls",
+  "version": "0.0.1",
+  "description": "The Custom Vue Bootstrap Controls we use at UpContent",
+  "main": "index.js",
+  "scripts": {
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test": "build && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upcontent/VueBootstrapControls.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "bootstrap",
+    "upcontent"
+  ],
+  "author": "Matthew Beatty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/upcontent/VueBootstrapControls/issues"
+  },
+  "homepage": "https://github.com/upcontent/VueBootstrapControls#readme",
+  "dependencies": {
+    "uuid": "^3.2.1",
+    "bootstrap": "^4.0.0",
+    "vue": "^2.5.16",
+    "vue-color": "^2.4.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-alpha.8",
+    "@vue/cli-plugin-eslint": "^3.0.0-alpha.8",
+    "@vue/cli-service": "^3.0.0-alpha.8",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "babel": {
+    "presets": [
+      "@vue/app"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
