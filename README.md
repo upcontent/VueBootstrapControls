@@ -7,6 +7,6 @@ The UpContent Vue Bootstrap Controls
 
 ## Color Picker
 
-## Paginator
+## Icon Picker
 
-## Progress Bar
+## Tabs
